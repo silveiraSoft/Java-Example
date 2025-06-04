@@ -92,7 +92,7 @@ class Solution4 {
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
                 .entrySet().stream()
                 //.sorted(Map.Entry.<Integer, Long>comparingByValue().reversed())
-                //.sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                 //.sorted((e, f) -> Long.compare(f.getValue(), e.getValue()))
                 //.sorted((e, f) -> f.getValue().compareTo(e.getValue()))
                 /*
@@ -103,10 +103,10 @@ class Solution4 {
                     }
                     return result;
                 })
-                */
+                /* 
                 .sorted((e, f) -> {
                     return f.getValue() > e.getValue()? 1: -1;
-                })
+                })*/
                 .limit(2)
                 .skip(1)
                 .findFirst()
