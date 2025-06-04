@@ -107,12 +107,12 @@ class Solution4 {
                 .sorted((e, f) -> {
                     return f.getValue() > e.getValue()? 1: -1;
                 })*/
+
                 .limit(2)
                 .skip(1)
                 .findFirst()
                 .map(Map.Entry::getKey)
                 .orElseThrow(() -> new IllegalArgumentException("No second frequent element found"));
-
     }
 }
 
